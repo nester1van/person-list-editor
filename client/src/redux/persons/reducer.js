@@ -1,5 +1,7 @@
 import { REQ_PERSONS, ERR_PERSONS, 
-  RES_GET_ALL_PERSONS, RES_GET_PERSON_BY_ID } from './actions';
+  RES_GET_ALL_PERSONS, RES_GET_PERSON_BY_ID,
+  RES_CREATE_PERSON, RES_EDIT_PERSON_BY_ID, 
+  RES_DELETE_PERSON_BY_ID } from './actions';
 
 const initialPersons = {
   isFetching: false,
@@ -19,6 +21,10 @@ const persons = (state = initialPersons, action) => {
       return {isFetching, status, persons};
     case RES_GET_PERSON_BY_ID:
       return {...state, isFetching, status, person};
+    case RES_CREATE_PERSON:
+    case RES_EDIT_PERSON_BY_ID:
+    case RES_DELETE_PERSON_BY_ID:
+      return {...state, isFetching, status};
     default:
       return state;
   }

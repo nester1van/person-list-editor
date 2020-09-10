@@ -1,14 +1,9 @@
 {
   "person": [
     {
-      "firstName": "Иван",
-      "lastName": "Иванов",
+      "firstName": "Спанч",
+      "lastName": "Боб",
       "id": 0
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 1
     }
   ]
 }
