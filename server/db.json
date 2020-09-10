@@ -1,0 +1,14 @@
+{
+  "person": [
+    {
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "id": 0
+    },
+    {
+      "firstName": "Иван2",
+      "lastName": "Иванов2",
+      "id": 1
+    }
+  ]
+}
