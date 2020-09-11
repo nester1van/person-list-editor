@@ -1,5 +1,5 @@
 // import { setPerson, getAllPersons, getPersonByID, createPerson,
-//    editPersonByID, deleteUserByID } from './persons/actions';
+//    editPersonByID, deletePersonByID } from './persons/actions';
 // import { setShowModalPerson } from './appearance/actions';
 
 const debugStore = (store, isDebugging) => {
@@ -13,7 +13,7 @@ const debugStore = (store, isDebugging) => {
     // store.dispatch(getPersonByID(2)); // status: 404
     // store.dispatch(createPerson('Карп', 'Карпов'));
     // store.dispatch(editPersonByID(0, 'Спанч', 'Боб'));
-    // store.dispatch(deleteUserByID(1));
+    // store.dispatch(deletePersonByID(1));
 
     // appearance
     // store.dispatch(setShowModalPerson(true));

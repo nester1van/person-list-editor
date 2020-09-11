@@ -121,7 +121,7 @@ export const editPersonByID = (id, firstName, lastName) => (dispatch) => {
     })
 };
 
-export const deleteUserByID = (id) => (dispatch) => {
+export const deletePersonByID = (id) => (dispatch) => {
   dispatch(reqPersons());
   return axios.delete(`${urlAPIperson}/${id}`)
     .then(res => {
