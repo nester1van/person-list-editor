@@ -39,32 +39,43 @@ const CreateEditPersonModal = ({ isShownPersonModal, personModalType,
 
   return (
     <div className={'person-modal ' + isShown()}>
-      <h2>{personModalType === 'create' 
-        ? 'Создание сотрудника' : 'Редактирование сотрудника'}
-      </h2>
-      <button onClick={handleCloseModal}>Назад к списку</button>
-      <form onSubmit={handleSavePerson}>
-        <input 
-          onChange={handleChangeFirstName}
-          type='text' 
-          name='firstName' 
-          value={person.firstName}
-          placeholder='Введите имя сотрудника'
-          required
-        />
-        <input 
-          onChange={handleChangeLastName}
-          type='text' 
-          name='lastName'
-          value={person.lastName}
-          placeholder='Введите фамилию сотрудника'
-          required
-        />
-        <input 
-          type='submit'
-          value='Сохранить'
-        />
-      </form>
+      <div className='person-modal__body'>
+        <h2 className='person-modal__title'>
+          {personModalType === 'create' 
+          ? 'Создание сотрудника' : 'Редактирование сотрудника'}
+        </h2>
+        <button 
+          className='person-modal__back-to-list-btn'
+          onClick={handleCloseModal}
+          >Назад к списку</button>
+        <form 
+          className='person-modal__form'
+          onSubmit={handleSavePerson}>
+          <input 
+            className='person-modal__input-first-name'
+            onChange={handleChangeFirstName}
+            type='text' 
+            name='firstName' 
+            value={person.firstName}
+            placeholder='Введите имя сотрудника'
+            required
+          />
+          <input 
+            className='person-modal__input-last-name'
+            onChange={handleChangeLastName}
+            type='text' 
+            name='lastName'
+            value={person.lastName}
+            placeholder='Введите фамилию сотрудника'
+            required
+          />
+          <input 
+            className='person-modal__input-submit'
+            type='submit'
+            value='Сохранить'
+          />
+        </form>
+      </div>
     </div>
   )
 };
