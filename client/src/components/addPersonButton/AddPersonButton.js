@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setShowModalPerson } from '../../redux/appearance/actions';
+import './addPersonButton.css';
 
 const AddPersonButton = ({ setShowModalPerson }) => {
   const handleAddPerson = () => {
@@ -8,7 +9,10 @@ const AddPersonButton = ({ setShowModalPerson }) => {
   }
 
   return (
-    <button onClick={handleAddPerson}>Add person</button>
+    <button 
+      onClick={handleAddPerson}
+      className='add-person-btn'
+      >Add person</button>
   )
 };
 

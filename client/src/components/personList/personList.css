@@ -1,0 +1,24 @@
+.person-list {
+  margin-bottom: 40px;
+}
+
+.person-list__title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.person-list__list-header {
+  padding-left: 30px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #333;
+}
+
+.person-list__list-header > span:first-child{
+  padding-right: 30px;
+}
+
+.person-list__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

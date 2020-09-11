@@ -1,0 +1,53 @@
+.person-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #333;
+  transition: background-color .2s linear;
+}
+
+.person-item:hover {
+  background-color: rgb(227, 229, 252);
+}
+
+.person-item__icon {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.person-item__first-name {
+  padding-right: 30px;
+}
+
+.person-item__first-name,
+.person-item__last-name {
+  font-size: 18px;
+}
+
+.person-item__btn-edit,
+.person-item__btn-delete {
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  transition: background-color .2s linear;
+
+}
+
+.person-item__btn-edit {
+  background-color: #2979ff;
+  margin-right: 5px;
+}
+
+.person-item__btn-edit:hover {
+  background-color: #0f5cdc;
+}
+
+.person-item__btn-delete {
+  background-color: rgb(243, 31, 31);
+}
+
+.person-item__btn-delete:hover {
+  background-color: rgb(216, 28, 28);
+}
