@@ -1,9 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setShowModalPerson } from '../../redux/appearance/actions';
 
-const AddPersonButton = () => {
+const AddPersonButton = ({ setShowModalPerson }) => {
+  const handleAddPerson = () => {
+    setShowModalPerson(true);
+  }
+
   return (
-    <button>Add person</button>
+    <button onClick={handleAddPerson}>Add person</button>
   )
 };
 
-export default AddPersonButton;
+export default connect(null, {setShowModalPerson})(AddPersonButton);

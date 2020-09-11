@@ -2,6 +2,7 @@ import axios from 'axios';
 import config from '../../config';
 
 // action types
+export const SET_PERSON = 'SET_PERSON'; 
 export const REQ_PERSONS = 'REQ_PERSONS';
 export const ERR_PERSONS = 'ERR_PERSONS';
 
@@ -12,6 +13,11 @@ export const RES_EDIT_PERSON_BY_ID = 'RES_EDIT_PERSON_BY_ID';
 export const RES_DELETE_PERSON_BY_ID = 'RES_DELETE_PERSON_BY_ID';
 
 // action creators
+export const setPerson = (person) => ({
+  type: SET_PERSON,
+  person
+});
+
 const reqPersons = () => ({
   type: REQ_PERSONS,
   isFetching: true

@@ -1,12 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PersonItem from './personItem/PersonItem';
 
-const PersonList = () => {
+const PersonList = ({ persons }) => {
   return (
-    <>
-      <PersonItem/>
-    </>
+    <ul>
+      {persons.map(person => {
+        const { firstName, lastName, id } = person;
+        return <PersonItem 
+          firstName={firstName} 
+          lastName={lastName} 
+          key={id}
+          id={id}/>
+      })}
+    </ul>
   )
 };
 
-export default PersonList;
+const mapStateToProps = (state) => ({
+  persons: state.persons.persons
+});
+
+export default connect(mapStateToProps)(PersonList);

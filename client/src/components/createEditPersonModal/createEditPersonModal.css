@@ -1,0 +1,7 @@
+.person-modal {
+  display: none;
+}
+
+.person-modal_is-shown {
+  display: block;
+}
