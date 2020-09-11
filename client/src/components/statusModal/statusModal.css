@@ -1,0 +1,7 @@
+.status-modal {
+  display: none;
+}
+
+.status-modal_is-shown {
+  display: block;
+}

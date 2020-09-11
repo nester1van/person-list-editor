@@ -5,7 +5,7 @@ import { SET_PERSON, REQ_PERSONS, ERR_PERSONS,
 
 const initialPersons = {
   isFetching: false,
-  status: undefined,
+  status: 200,
   persons: [],
   person: {firstName: '', lastName: '', id: undefined}
 };

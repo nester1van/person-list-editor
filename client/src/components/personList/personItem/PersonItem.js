@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getPersonByID, deletePersonByID } from '../../../redux/persons/actions';
-import { setShowModalPerson, setTypeModalPerson } from '../../../redux/appearance/actions';
+import { setShowModalPerson, setTypeModalPerson,
+  setShowModalStatus } from '../../../redux/appearance/actions';
 
-const PersonItem = ({ firstName, lastName, id, getPersonByID,
-  setShowModalPerson, setTypeModalPerson, deletePersonByID }) => {
+const PersonItem = ({ firstName, lastName, id, getPersonByID,setShowModalPerson, 
+  setTypeModalPerson, deletePersonByID, setShowModalStatus }) => {
 
   const handleEditPerson = () => {
     getPersonByID(id);
@@ -14,6 +15,7 @@ const PersonItem = ({ firstName, lastName, id, getPersonByID,
 
   const handleDeletePerson = () => {
     deletePersonByID(id);
+    setShowModalStatus(true);
   };
 
   return (
@@ -27,5 +29,6 @@ const PersonItem = ({ firstName, lastName, id, getPersonByID,
 };
 
 export default connect(null, 
-  {getPersonByID, setShowModalPerson, setTypeModalPerson, deletePersonByID})
+  {getPersonByID, setShowModalPerson, setTypeModalPerson, 
+  deletePersonByID, setShowModalStatus})
   (PersonItem);

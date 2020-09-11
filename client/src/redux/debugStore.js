@@ -1,6 +1,6 @@
 // import { setPerson, getAllPersons, getPersonByID, createPerson,
 //    editPersonByID, deletePersonByID } from './persons/actions';
-// import { setShowModalPerson } from './appearance/actions';
+// import { setShowModalPerson, setShowModalStatus } from './appearance/actions';
 
 const debugStore = (store, isDebugging) => {
   if (isDebugging) {
@@ -17,6 +17,7 @@ const debugStore = (store, isDebugging) => {
 
     // appearance
     // store.dispatch(setShowModalPerson(true));
+    // store.dispatch(setShowModalStatus(true));
   }
 }
 

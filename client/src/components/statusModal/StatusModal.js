@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { setShowModalStatus } from '../../redux/appearance/actions';
+import statusMessage from './statusMessage';
+import './statusModal.css';
 
-const StatusModal = () => {
+const StatusModal = ({ isShownStatusModal, status, setShowModalStatus }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModalStatus(false);
+    }, 1000);
+  }, [isShownStatusModal])
+
+  const isShown = () => isShownStatusModal ? 'status-modal_is-shown' : '';
+
   return (
-    <>
-      status modal
-    </>
+    <div className={'status-modal ' + isShown()}>
+      {statusMessage[status]}
+    </div>
   )
 };
 
-export default StatusModal;
+const mapStateToProps = (state) => ({
+  isShownStatusModal: state.appearance.isShownStatusModal,
+  status: state.persons.status
+});
+
+export default connect(mapStateToProps, {setShowModalStatus})(StatusModal);

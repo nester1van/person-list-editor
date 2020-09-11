@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setShowModalPerson } from '../../redux/appearance/actions';
+import { setShowModalPerson, setShowModalStatus } from '../../redux/appearance/actions';
 import { setPerson, createPerson, editPersonByID } from '../../redux/persons/actions';
 import './createEditPersonModal.css';
 
 const CreateEditPersonModal = ({ isShownPersonModal, personModalType, 
-  setShowModalPerson, setPerson, person, createPerson, editPersonByID }) => {
+  setShowModalPerson, setPerson, person, createPerson, 
+  editPersonByID, setShowModalStatus }) => {
   
   const isShown = () => isShownPersonModal ? 'person-modal_is-shown' : '';
 
@@ -26,13 +27,14 @@ const CreateEditPersonModal = ({ isShownPersonModal, personModalType,
   const handleSavePerson = (e) => {
     e.preventDefault();
     const { firstName, lastName, id } = person;
-    console.log(firstName, lastName, id);
     if (personModalType === 'create') {
       createPerson(firstName, lastName);
     } else {
       editPersonByID(id, firstName, lastName);
     }
     setShowModalPerson(false);
+    setShowModalStatus(true);
+    setPerson({firstName: '', lastName: ''});
   };
 
   return (
@@ -41,13 +43,14 @@ const CreateEditPersonModal = ({ isShownPersonModal, personModalType,
         ? 'Создание сотрудника' : 'Редактирование сотрудника'}
       </h2>
       <button onClick={handleCloseModal}>Назад к списку</button>
-      <form>
+      <form onSubmit={handleSavePerson}>
         <input 
           onChange={handleChangeFirstName}
           type='text' 
           name='firstName' 
           value={person.firstName}
           placeholder='Введите имя сотрудника'
+          required
         />
         <input 
           onChange={handleChangeLastName}
@@ -55,9 +58,9 @@ const CreateEditPersonModal = ({ isShownPersonModal, personModalType,
           name='lastName'
           value={person.lastName}
           placeholder='Введите фамилию сотрудника'
+          required
         />
         <input 
-          onClick={handleSavePerson}
           type='submit'
           value='Сохранить'
         />
@@ -73,5 +76,6 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps,
-   {setShowModalPerson, setPerson, createPerson, editPersonByID })
+   {setShowModalPerson, setPerson, createPerson, 
+    editPersonByID, setShowModalStatus })
    (CreateEditPersonModal);
