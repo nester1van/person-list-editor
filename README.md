@@ -11,6 +11,8 @@
 
 ## Реализация SPA
 
+![screenshot person list editor](https://github.com/nester1van/person-list-editor/screenshots/main_screenshot.png)
+
 Приложение представляет собой редактор списка сотрудников.
 
 Пользователь может создавать, редактировать и удалять сотрудников.
