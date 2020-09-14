@@ -8,17 +8,41 @@
 }
 
 .person-list__list-header {
-  padding-left: 30px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #333;
+  padding: 0 10px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.person-list__list-header > span:first-child{
+.person-list__icon {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.person-list__first-name {
+  padding-left: 5px;
   padding-right: 30px;
+}
+
+.person-list__first-name,
+.person-list__last-name {
+  font-size: 18px;
+  min-width: 100px;
+}
+
+.person-list__hr {
+  border-bottom: 2px solid #333;
 }
 
 .person-list__list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 374px) {
+  .person-list__icon {
+    display: none;
+  }
 }

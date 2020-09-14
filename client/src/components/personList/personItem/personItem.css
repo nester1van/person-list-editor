@@ -11,6 +11,13 @@
   background-color: rgb(227, 229, 252);
 }
 
+.person-item__name-group {
+  min-width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .person-item__icon {
   font-size: 18px;
   padding-right: 10px;
@@ -23,6 +30,11 @@
 .person-item__first-name,
 .person-item__last-name {
   font-size: 18px;
+  min-width: 100px;
+}
+
+.person-item__btn-group {
+  min-width: 72px;
 }
 
 .person-item__btn-edit,
@@ -32,7 +44,6 @@
   border: none;
   padding: 10px;
   transition: background-color .2s linear;
-
 }
 
 .person-item__btn-edit {
@@ -50,4 +61,16 @@
 
 .person-item__btn-delete:hover {
   background-color: rgb(216, 28, 28);
+}
+
+@media screen and (max-width: 374px) {
+  .person-item__icon {
+    display: none;
+  }
+
+  .person-item__first-name,
+  .person-item__last-name {
+    font-size: 14px;
+  }
+
 }

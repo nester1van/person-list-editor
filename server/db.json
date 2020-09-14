@@ -2,12 +2,12 @@
   "person": [
     {
       "firstName": "Иван",
-      "lastName": "Иванов ",
+      "lastName": "Покрышкин",
       "id": 1
     },
     {
-      "firstName": "Петр121121",
-      "lastName": "Петров",
+      "firstName": "Елена",
+      "lastName": "Чернова",
       "id": 2
     },
     {
@@ -16,79 +16,24 @@
       "id": 3
     },
     {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
+      "firstName": "Дмитрий",
+      "lastName": "Арсеньев",
       "id": 4
     },
     {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
+      "firstName": "Сергей ",
+      "lastName": "Овечкин",
       "id": 5
     },
     {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
+      "firstName": "Николай",
+      "lastName": "Яковлев",
       "id": 6
     },
     {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
+      "firstName": "Екатерина ",
+      "lastName": "Галкина",
       "id": 7
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 8
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 9
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 10
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 11
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 12
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 13
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 14
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 15
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 16
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 17
-    },
-    {
-      "firstName": "Иван2",
-      "lastName": "Иванов2",
-      "id": 18
     }
   ]
 }
