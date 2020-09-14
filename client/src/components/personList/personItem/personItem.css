@@ -30,6 +30,7 @@
 .person-item__first-name,
 .person-item__last-name {
   font-size: 18px;
+  font-style: italic;
   min-width: 100px;
 }
 

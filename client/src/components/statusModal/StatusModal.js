@@ -9,14 +9,16 @@ const StatusModal = ({ isShownStatusModal, status, setShowModalStatus }) => {
   useEffect(() => {
     setTimeout(() => {
       setShowModalStatus(false);
-    }, 1000);
-  }, [isShownStatusModal])
+    }, 1500);
+  }, [isShownStatusModal]);
 
   const isShown = () => isShownStatusModal ? 'status-modal_is-shown' : '';
+  const theme = () => (statusMessage[status].theme === 'success') ? 
+    ' status-modal_success' : ' status-modal_danger';
 
   return (
-    <div className={'status-modal ' + isShown()}>
-      {statusMessage[status]}
+    <div className={'status-modal ' + isShown() + theme()}>
+      {statusMessage[status].message}
     </div>
   )
 };

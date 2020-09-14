@@ -24,7 +24,7 @@
   padding: 10px;
   border-radius: 10px;
   animation-name: slideIn;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 @keyframes slideIn {
