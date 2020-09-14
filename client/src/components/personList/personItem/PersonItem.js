@@ -22,7 +22,10 @@ const PersonItem = ({ firstName, lastName, id, getPersonByID,setShowModalPerson,
   return (
     <li className='person-item'>
       <div className='person-item__name-group'>
-        <span className='person-item__icon'>&#128100;</span>
+        <span 
+          className='person-item__icon' 
+          role='img' 
+          aria-label='person'>&#128100;</span>
         <span className='person-item__first-name'>{firstName}</span>
         <span className='person-item__last-name'>{lastName}</span>
       </div>
